@@ -13,6 +13,9 @@ $config = [
         'frontend' => [
             'class' => 'app\modules\frontend\Module',
         ],
+        'user' => [
+            'class' => 'app\modules\user\Module',
+        ],
     ],
     'components' => [
         'request' => [
