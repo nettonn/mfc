@@ -7,6 +7,9 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'modules' => [
+        'main' => [
+            'class' => 'app\modules\main\Module',
+        ],
         'backend' => [
             'class' => 'app\modules\backend\Module',
         ],
