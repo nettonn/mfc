@@ -6,6 +6,11 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'modules' => [
+        'backend' => [
+            'class' => 'app\modules\backend\Module',
+        ],
+    ],
     'components' => [
         'request' => [
             'cookieValidationKey' => '5xN03URjhVqoxWjNeqIHacMaxMgY4gXD',
