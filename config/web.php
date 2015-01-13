@@ -18,6 +18,11 @@ $config = [
         ],
     ],
     'components' => [
+        'authManager' => [
+            'class' => 'yii\rbac\PhpManager',
+            'itemFile'=>__DIR__.'/rbac.php',
+            'defaultRoles'=>['guest'],
+        ],
         'request' => [
             'cookieValidationKey' => '5xN03URjhVqoxWjNeqIHacMaxMgY4gXD',
         ],
