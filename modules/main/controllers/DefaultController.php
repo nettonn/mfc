@@ -1,0 +1,28 @@
+<?php
+/**
+ * @author: dmitry lebedev <dev.nettonn@gmail.com>
+ * Date: 13.01.2015
+ */
+
+namespace app\modules\main\controllers;
+
+class DefaultController extends BaseFrontendController
+{
+    public function actionError()
+    {
+
+    }
+
+    public function actions()
+    {
+        return [
+            'error' => [
+                'class' => 'yii\web\ErrorAction',
+            ],
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+            ],
+        ];
+    }
+}
