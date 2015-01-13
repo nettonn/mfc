@@ -10,6 +10,9 @@ $config = [
         'backend' => [
             'class' => 'app\modules\backend\Module',
         ],
+        'frontend' => [
+            'class' => 'app\modules\frontend\Module',
+        ],
     ],
     'components' => [
         'request' => [
