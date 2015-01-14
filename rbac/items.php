@@ -4,8 +4,8 @@ return [
         'type' => 1,
         'description' => 'Administrator',
     ],
-    'guest' => [
+    'user' => [
         'type' => 1,
-        'description' => 'Guest',
+        'description' => 'User',
     ],
 ];
