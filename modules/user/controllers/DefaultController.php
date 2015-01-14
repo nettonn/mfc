@@ -50,7 +50,7 @@ class DefaultController extends Controller
     {
         if (!Yii::$app->user->isGuest) {
 //            return $this->goHome();
-            return Yii::$app->urlManager->createUrl('/admin/default/index');
+            return $this->redirect(Yii::$app->urlManager->createUrl('/admin/default/index'));
         }
 
         $model = new LoginForm();
