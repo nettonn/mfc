@@ -38,6 +38,7 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
+            'viewPath'=>'@app/views/mail',
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
