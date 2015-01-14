@@ -3,7 +3,7 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
-    'id' => 'CMS',
+    'id' => 'cms',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'language'=>'ru_RU',
