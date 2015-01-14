@@ -3,9 +3,10 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
-    'id' => 'basic',
+    'id' => 'CMS',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language'=>'ru_RU',
     'modules' => [
         'main' => [
             'class' => 'app\modules\main\Module',
@@ -28,8 +29,9 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'app\modules\user\models\User',
             'enableAutoLogin' => true,
+            'loginUrl'=>'/user/default/login',
         ],
         'errorHandler' => [
             'errorAction' => 'main/default/error',
@@ -40,12 +42,7 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-                '<_m:[\w\-]+>/<_c:[\w\-]+>/<_a:[\w\-]+>/<id:\d+>' => '<_m>/<_c>/<_a>',
-                '<_m:[\w\-]+>/<_c:[\w\-]+>/<id:\d+>' => '<_m>/<_c>/view',
-                '<_m:[\w\-]+>' => '<_m>/default/index',
-                '<_m:[\w\-]+>/<_c:[\w\-]+>' => '<_m>/<_c>/index',
-            ],
+            'rules' => require(__DIR__.'/urls.php'),
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

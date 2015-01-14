@@ -23,8 +23,8 @@ class RbacController extends Controller
         $admin->description = 'Administrator';
         $auth->add($admin);
 
-        $guest = $auth->createRole('guest');
-        $guest->description = 'Guest';
-        $auth->add($guest);
+        $user = $auth->createRole('user');
+        $user->description = 'User';
+        $auth->add($user);
     }
 }
