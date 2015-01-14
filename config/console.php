@@ -9,11 +9,14 @@ return [
     'id' => 'basic-console',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log', 'gii'],
-    'controllerNamespace' => 'app\commands',
+    'controllerNamespace' => 'app\modules\main\commands',
     'modules' => [
         'gii' => 'yii\gii\Module',
     ],
     'components' => [
+        'authManager' => [
+            'class' => 'app\modules\main\components\PhpManager',
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],

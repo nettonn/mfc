@@ -1,0 +1,30 @@
+<?php
+/**
+ * @author: dmitry lebedev <dev.nettonn@gmail.com>
+ * Date: 14.01.2015
+ */
+
+namespace app\modules\main\commands;
+
+use Yii;
+use yii\console\Controller;
+
+class RbacController extends Controller
+{
+    public function actionInit()
+    {
+        if (!$this->confirm("Are you sure? It will re-create permissions tree.")) {
+            return self::EXIT_CODE_NORMAL;
+        }
+        $auth = Yii::$app->authManager;
+        $auth->removeAll();
+
+        $admin = $auth->createRole('admin');
+        $admin->description = 'Administrator';
+        $auth->add($admin);
+
+        $guest = $auth->createRole('guest');
+        $guest->description = 'Guest';
+        $auth->add($guest);
+    }
+}
