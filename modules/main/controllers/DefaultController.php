@@ -8,6 +8,11 @@ namespace app\modules\main\controllers;
 
 class DefaultController extends BaseFrontendController
 {
+    public function actionIndex()
+    {
+        
+    }
+
     public function actions()
     {
         return [

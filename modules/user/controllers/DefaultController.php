@@ -11,10 +11,10 @@ use yii\base\InvalidParamException;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\BadRequestHttpException;
-use yii\web\Controller;
+use app\modules\main\controllers\BaseFrontendController;
 use Yii;
 
-class DefaultController extends Controller
+class DefaultController extends BaseFrontendController
 {
     public $layout = '/bootstrap';
 
