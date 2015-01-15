@@ -19,6 +19,9 @@ $config = [
         ],
     ],
     'components' => [
+        'session' => [
+            'class' => 'yii\web\DbSession',
+        ],
         'authManager' => [
             'class' => 'app\modules\main\components\PhpManager',
         ],
