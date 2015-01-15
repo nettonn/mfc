@@ -10,5 +10,8 @@ use yii\web\Controller;
 
 abstract class BaseFrontendController extends Controller
 {
+    public function init()
+    {
 
+    }
 }

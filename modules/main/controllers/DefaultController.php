@@ -10,7 +10,7 @@ class DefaultController extends BaseFrontendController
 {
     public function actionIndex()
     {
-        
+
     }
 
     public function actions()
@@ -21,7 +21,7 @@ class DefaultController extends BaseFrontendController
             ],
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+                'fixedVerifyCode' => null,
             ],
         ];
     }
