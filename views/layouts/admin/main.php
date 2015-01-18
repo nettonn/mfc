@@ -27,7 +27,7 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'My Company',
+                'brandLabel' => 'На сайт',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
@@ -36,14 +36,12 @@ AppAsset::register($this);
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
-                    ['label' => 'Home', 'url' => ['/site/index']],
-                    ['label' => 'About', 'url' => ['/site/about']],
-                    ['label' => 'Contact', 'url' => ['/site/contact']],
-                    Yii::$app->user->isGuest ?
-                        ['label' => 'Login', 'url' => ['/user/default/login']] :
-                        ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                            'url' => ['/user/default/logout'],
-                            'linkOptions' => ['data-method' => 'post']],
+                    ['label' => 'Пользователи', 'url' => ['/user/user-admin/index']],
+                    [
+                        'label' => 'Выход (' . Yii::$app->user->identity->username . ')',
+                        'url' => ['/user/default/logout'],
+                        'linkOptions' => ['data-method' => 'post']
+                    ],
                 ],
             ]);
             NavBar::end();
@@ -51,6 +49,10 @@ AppAsset::register($this);
 
         <div class="container">
             <?= Breadcrumbs::widget([
+                'homeLink'=>[
+                    'label'=>'Главная',
+                    'url'=>['/admin/default/index']
+                ],
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
             <?= Alert::widget() ?>

@@ -6,6 +6,7 @@ use Yii;
 use app\modules\user\models\User;
 use app\modules\user\models\UserSearch;
 use app\modules\main\controllers\BaseAdminController;
+use yii\helpers\ArrayHelper;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -16,14 +17,14 @@ class UserAdminController extends BaseAdminController
 {
     public function behaviors()
     {
-        return [
+        return ArrayHelper::merge(parent::behaviors(), [
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['post'],
                 ],
             ],
-        ];
+        ]);
     }
 
     /**
