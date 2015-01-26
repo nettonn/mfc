@@ -24,6 +24,9 @@ $config = [
         ],
         'authManager' => [
             'class' => 'app\modules\main\components\PhpManager',
+            'itemFile' => '@app/config/rbac/items.php',
+            'assignmentFile' => '@app/config/rbac/assignments.php',
+            'ruleFile' => '@app/config/rbac/rules.php',
         ],
         'request' => [
             'cookieValidationKey' => '5xN03URjhVqoxWjNeqIHacMaxMgY4gXD',
