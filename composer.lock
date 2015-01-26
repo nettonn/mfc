@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "716219500c2c1812dcfb541b8a911fb2",
+    "hash": "d6d50e8c62281ba6624f641cd926eff5",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
-            "version": "v3.3.1",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "9a7e365c2c4360335d25246dac11afb1f577210a"
+                "reference": "bcf7dd38b5ab180256e2e4fb5da0369551b3f082"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/9a7e365c2c4360335d25246dac11afb1f577210a",
-                "reference": "9a7e365c2c4360335d25246dac11afb1f577210a",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/bcf7dd38b5ab180256e2e4fb5da0369551b3f082",
+                "reference": "bcf7dd38b5ab180256e2e4fb5da0369551b3f082",
                 "shasum": ""
             },
             "require": {
@@ -659,12 +659,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/creocoder/yii2-nested-sets.git",
-                "reference": "71921d7c1c1f1ecebb41b0ab196796698e669645"
+                "reference": "f63b4691e7ffa981814c71a688872d269308051b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/creocoder/yii2-nested-sets/zipball/71921d7c1c1f1ecebb41b0ab196796698e669645",
-                "reference": "71921d7c1c1f1ecebb41b0ab196796698e669645",
+                "url": "https://api.github.com/repos/creocoder/yii2-nested-sets/zipball/f63b4691e7ffa981814c71a688872d269308051b",
+                "reference": "f63b4691e7ffa981814c71a688872d269308051b",
                 "shasum": ""
             },
             "require": {
@@ -691,7 +691,7 @@
                 "nested sets",
                 "yii2"
             ],
-            "time": "2015-01-16 20:41:17"
+            "time": "2015-01-19 14:42:49"
         },
         {
             "name": "mihaildev/yii2-ckeditor",
@@ -971,6 +971,7 @@
         "creocoder/yii2-nested-sets": 20
     },
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.4.0"
     },

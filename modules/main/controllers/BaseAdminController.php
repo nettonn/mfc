@@ -6,12 +6,17 @@
 
 namespace app\modules\main\controllers;
 
-use yii\web\Controller;
 use yii\filters\AccessControl;
 
-abstract class BaseAdminController extends Controller
+abstract class BaseAdminController extends BaseController
 {
     public $layout = '/admin/main';
+
+    public function init()
+    {
+        parent::init();
+
+    }
 
     public function behaviors()
     {
