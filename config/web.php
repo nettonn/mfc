@@ -62,6 +62,16 @@ $config = [
         ],
         'db' => require(__DIR__ . '/db.php'),
     ],
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => 'mihaildev\elfinder\PathController',
+            'access' => ['@'],
+            'root' => [
+                'path' => 'uploads',
+                'name' => 'Uploads'
+            ],
+        ]
+    ],
     'params' => $params,
 ];
 

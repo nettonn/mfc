@@ -10,4 +10,9 @@ class DefaultController extends BaseAdminController
     {
         return $this->render('index');
     }
+
+    public function actionFiles()
+    {
+        return $this->render('files');
+    }
 }
