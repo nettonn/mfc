@@ -247,4 +247,9 @@ class ActiveField extends \yii\widgets\ActiveField
                 ],
             ]);
     }
+
+    public function ace()
+    {
+        return $this->widget(\trntv\aceeditor\AceEditor::className(), []);
+    }
 }

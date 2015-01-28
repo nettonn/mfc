@@ -13,7 +13,8 @@
         "kartik-v/bootstrap-fileinput": "dev-master",
         "2amigos/yii2-file-input-widget" : "*",
         "kartik-v/yii2-widget-select2": "*",
-        "2amigos/yii2-date-time-picker-widget" : "*"
+        "2amigos/yii2-date-time-picker-widget" : "*",
+        "trntv/yii2-aceeditor": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",
