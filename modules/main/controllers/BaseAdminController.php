@@ -20,7 +20,7 @@ abstract class BaseAdminController extends BaseController
 
     public function behaviors()
     {
-        return [
+        return array_merge(parent::behaviors(), [
             'access' => [
                 'class' => AccessControl::className(),
                 'rules' => [
@@ -30,6 +30,12 @@ abstract class BaseAdminController extends BaseController
                     ],
                 ],
             ],
-        ];
+            'verbs' => [
+                'class' => \yii\filters\VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['post'],
+                ],
+            ],
+        ]);
     }
 }
