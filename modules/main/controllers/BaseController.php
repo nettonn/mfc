@@ -6,7 +6,7 @@
 
 namespace app\modules\main\controllers;
 
-class BaseController extends \yii\web\Controller
+abstract class BaseController extends \yii\web\Controller
 {
     public function init()
     {
