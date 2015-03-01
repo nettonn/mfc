@@ -9,4 +9,5 @@ return [
     'admin/<_m:[\w\-]+>/<_c:[\w\-]+>/<id:\d+>' => '<_m>/<_c>-admin/view',
     'admin/<_m:[\w\-]+>/<_c:[\w\-]+>/<_a:[\w\-]+>/<id:\d+>' => '<_m>/<_c>-admin/<_a>',
     'admin/<_m:[\w\-]+>/<_c:[\w\-]+>/<_a:[\w\-]+>' => '<_m>/<_c>-admin/<_a>',
+    'debug/<_c>/<_a>' => 'debug/<_c>/<_a>',
 ];
