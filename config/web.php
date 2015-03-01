@@ -37,7 +37,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\modules\user\models\User',
             'enableAutoLogin' => true,
-            'loginUrl'=>'/user/default/login',
+            'loginUrl'=>['/user/default/login'],
         ],
         'errorHandler' => [
             'errorAction' => 'main/default/error',
@@ -49,6 +49,7 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing'=>true,
             'rules' => require(__DIR__.'/urls.php'),
         ],
         'log' => [

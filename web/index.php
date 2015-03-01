@@ -9,7 +9,7 @@ if(defined('YII_DEBUG') && YII_DEBUG) {
 } else {
     ini_set('display_errors', 'off');
     error_reporting(E_ERROR);
-//    die();
+    die();
 }
 
 require(__DIR__ . '/../vendor/autoload.php');

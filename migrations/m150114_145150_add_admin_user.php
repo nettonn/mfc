@@ -13,6 +13,7 @@ class m150114_145150_add_admin_user extends Migration
                 'password_hash'=>Yii::$app->security->generatePasswordHash(97500009750000),
                 'role'=>'admin',
                 'status'=>1,
+                'auth_key'=>'YasdZK1LtSMDN3-vD4sIG-OO2Nrzh9r4',
                 'created_at'=>time(),
                 'updated_at'=>time(),
             ]
