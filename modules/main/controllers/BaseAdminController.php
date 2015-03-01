@@ -7,22 +7,20 @@
 namespace app\modules\main\controllers;
 
 use yii\filters\AccessControl;
+use yii\helpers\ArrayHelper;
 
 abstract class BaseAdminController extends BaseController
 {
     public $layout = '/admin/main';
 
-    public $menu = [];
-
     public function init()
     {
         parent::init();
-
     }
 
     public function behaviors()
     {
-        return array_merge(parent::behaviors(), [
+        return ArrayHelper::merge(parent::behaviors(), [
             'access' => [
                 'class' => AccessControl::className(),
                 'rules' => [
@@ -30,12 +28,6 @@ abstract class BaseAdminController extends BaseController
                         'allow' => true,
                         'roles' => ['admin'],
                     ],
-                ],
-            ],
-            'verbs' => [
-                'class' => \yii\filters\VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['post'],
                 ],
             ],
         ]);

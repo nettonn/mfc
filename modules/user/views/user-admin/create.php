@@ -6,9 +6,12 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\modules\user\models\User */
 
-$this->title = 'Create User';
-$this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = $model->getAttributeLabel('modelName').' - добавить';
+$this->params['breadcrumbs'][] = ['label' => $model->getAttributeLabel('modelName'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = 'Добавить';
+$this->params['menu'] = [
+    ['label'=>'Список', 'url'=>['index']]
+];
 ?>
 <div class="user-create">
 

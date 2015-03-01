@@ -51,6 +51,8 @@ class User extends ActiveRecord implements IdentityInterface
             ['username', 'unique', 'targetClass' => self::className(),],
             ['username', 'string', 'min' => 2, 'max' => 255],
 
+            ['password', 'string', 'min' => 2, 'max' => 255],
+
             ['email', 'required'],
             ['email', 'email'],
             ['email', 'unique', 'targetClass' => self::className(),],
@@ -73,21 +75,23 @@ class User extends ActiveRecord implements IdentityInterface
         return [
             'id' => 'ID',
             'username' => 'Имя пользователя',
+            'password' => 'Пароль',
             'password_hash' => 'Password Hash',
             'password_reset_token' => 'Password Reset Token',
             'email' => 'Email',
             'role' => 'Роль',
             'status' => 'Статус',
             'created_at' => 'Создан',
-            'updated_at' => 'Обновлен',
+            'updated_at' => 'Изменен',
             'auth_key' => 'Auth Key',
             'modelName'=>'Пользователи',
         ];
     }
 
-    public function getStatusName()
+    public function getStatusName($id = false)
     {
         $statuses = self::getStatusesArray();
+        if($id!==false) return isset($statuses[$id]) ? $statuses[$id] : '';
         return isset($statuses[$this->status]) ? $statuses[$this->status] : '';
     }
 
@@ -100,9 +104,10 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
-    public function getRoleName()
+    public function getRoleName($id = false)
     {
         $roles = self::getRolesArray();
+        if($id!==false) return isset($roles[$id]) ? $roles[$id] : '';
         return isset($roles[$this->role]) ? $roles[$this->role] : '';
     }
 
@@ -184,6 +189,11 @@ class User extends ActiveRecord implements IdentityInterface
     public function validatePassword($password)
     {
         return Yii::$app->security->validatePassword($password, $this->password_hash);
+    }
+
+    public function getPassword()
+    {
+        return '';
     }
 
     /**

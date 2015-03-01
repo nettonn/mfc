@@ -15,6 +15,20 @@ use app\modules\main\models\BaseActiveRecord;
 
 abstract class CrudAdminController extends BaseAdminController
 {
+    /**
+     * switch($typeOrCondition) {
+     *     case 'search':
+     *         return new UserSearch();
+     *     case 'model':
+     *         return new User();
+     *     case 'name':
+     *         return 'User';
+     * }
+     * return User::findOne($typeOrCondition);
+     *
+     * @param $typeOrCondition
+     * @return mixed
+     */
     abstract protected function getModel($typeOrCondition);
 
     public function behaviors()
@@ -131,8 +145,10 @@ abstract class CrudAdminController extends BaseAdminController
             $post[$modelClass] = current($_POST[$modelClass]);
             if ($model->load($post))
                 $model->save();
-            echo Json::encode(['output'=>'', 'message'=>'']);
+            echo Json::encode(['output'=>$this->getEditableReturnValue($post[$modelClass]), 'message'=>'']);
             Yii::$app->end();
         }
     }
+
+    abstract protected function getEditableReturnValue($attributes);
 }

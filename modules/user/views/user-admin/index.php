@@ -8,7 +8,7 @@ use yii\helpers\Html;
 
 $this->title = $searchModel->getAttributeLabel('modelName').' управление';
 $this->params['breadcrumbs'][] = $searchModel->getAttributeLabel('modelName');
-$this->context->menu = [
+$this->params['menu'] = [
     ['label'=>'Добавить', 'url'=>['create']],
 ];
 ?>
@@ -29,7 +29,28 @@ $this->context->menu = [
             ],
         ],
         'email:email',
-        'role',
+        [
+            'class' => 'kartik\grid\EditableColumn',
+            'attribute'=>'role',
+            'content'=>function ($model, $key, $index, $column){
+                return $model->getRoleName($model->role);
+            },
+            'editableOptions' => [
+                'inputType' => \kartik\editable\Editable::INPUT_DROPDOWN_LIST,
+                'data'=>$searchModel->getRolesArray(),
+            ],
+        ],
+        [
+            'class' => 'kartik\grid\EditableColumn',
+            'attribute'=>'status',
+            'content'=>function ($model, $key, $index, $column){
+                return $model->getStatusName($model->status);
+            },
+            'editableOptions' => [
+                'inputType' => \kartik\editable\Editable::INPUT_DROPDOWN_LIST,
+                'data'=>$searchModel->getStatusesArray(),
+            ],
+        ],
         'created_at:date',
         'updated_at:date',
         ['class' => 'kartik\grid\ActionColumn'],

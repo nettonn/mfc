@@ -24,4 +24,13 @@ class UserAdminController extends CrudAdminController
         }
         return User::findOne($typeOrCondition);
     }
+
+    protected function getEditableReturnValue($attributes)
+    {
+        if(isset($attributes['status']))
+            return (new User())->getStatusName($attributes['status']);
+        if(isset($attributes['role']))
+            return (new User())->getRoleName($attributes['role']);
+        return '';
+    }
 }

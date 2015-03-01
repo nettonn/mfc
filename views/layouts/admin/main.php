@@ -51,11 +51,11 @@ AppAsset::register($this);
         <div class="container-fluid main-container">
             <div class="row">
                 <div class="col-sm-3 col-md-2">
-                    <?php if($this->context->menu): ?>
+                    <?php if(isset($this->params['menu'])): ?>
                         <div class="panel panel-default">
                             <div class="panel-heading">Действия</div>
                             <div class="panel-body">
-                                <?= Nav::widget(['options'=>['class'=>'nav nav-pills nav-stacked'], 'items'=>$this->context->menu]) ?>
+                                <?= Nav::widget(['options'=>['class'=>'nav nav-pills nav-stacked'], 'items'=>$this->params['menu']]) ?>
                             </div>
                         </div>
                     <?php endif ?>
