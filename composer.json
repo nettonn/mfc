@@ -12,7 +12,10 @@
         "mihaildev/yii2-ckeditor": "*",
         "kartik-v/yii2-widget-select2": "*",
         "2amigos/yii2-date-time-picker-widget" : "*",
-        "trntv/yii2-aceeditor": "*"
+        "trntv/yii2-aceeditor": "*",
+        "kartik-v/yii2-grid": "*",
+        "kartik-v/yii2-editable": "dev-master",
+        "kartik-v/yii2-widgets": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",

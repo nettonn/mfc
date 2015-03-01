@@ -29,6 +29,7 @@ AppAsset::register($this);
             NavBar::begin([
                 'brandLabel' => 'На сайт',
                 'brandUrl' => Yii::$app->homeUrl,
+                'innerContainerOptions'=>['class'=>'container-fluid'],
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
@@ -47,21 +48,35 @@ AppAsset::register($this);
             NavBar::end();
         ?>
 
-        <div class="container">
-            <?= Breadcrumbs::widget([
-                'homeLink'=>[
-                    'label'=>'Главная',
-                    'url'=>['/admin/default/index']
-                ],
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
-            <?= Alert::widget() ?>
-            <?= $content ?>
+        <div class="container-fluid main-container">
+            <div class="row">
+                <div class="col-sm-3 col-md-2">
+                    <?php if($this->context->menu): ?>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Действия</div>
+                            <div class="panel-body">
+                                <?= Nav::widget(['options'=>['class'=>'nav nav-pills nav-stacked'], 'items'=>$this->context->menu]) ?>
+                            </div>
+                        </div>
+                    <?php endif ?>
+                </div>
+                <div class="col-sm-9 col-md-10">
+                    <?= Breadcrumbs::widget([
+                        'homeLink'=>[
+                            'label'=>'Главная',
+                            'url'=>['/admin/default/index']
+                        ],
+                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                    ]) ?>
+                    <?= Alert::widget() ?>
+                    <?= $content ?>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer class="footer">
-        <div class="container">
+        <div class="container-fluid">
             <p class="pull-left">&copy; <?= date('Y') ?></p>
         </div>
     </footer>

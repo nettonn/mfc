@@ -81,6 +81,7 @@ class User extends ActiveRecord implements IdentityInterface
             'created_at' => 'Создан',
             'updated_at' => 'Обновлен',
             'auth_key' => 'Auth Key',
+            'modelName'=>'Пользователи',
         ];
     }
 

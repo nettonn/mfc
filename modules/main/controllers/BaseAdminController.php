@@ -12,6 +12,8 @@ abstract class BaseAdminController extends BaseController
 {
     public $layout = '/admin/main';
 
+    public $menu = [];
+
     public function init()
     {
         parent::init();

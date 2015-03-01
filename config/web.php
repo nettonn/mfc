@@ -6,7 +6,7 @@ $config = [
     'id' => 'cms',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'language'=>'ru_RU',
+    'language'=>'ru-RU',
     'modules' => [
         'main' => [
             'class' => 'app\modules\main\Module',
@@ -17,6 +17,9 @@ $config = [
         'user' => [
             'class' => 'app\modules\user\Module',
         ],
+        'gridview' =>  [
+            'class' => '\kartik\grid\Module'
+        ]
     ],
     'components' => [
         'session' => [
