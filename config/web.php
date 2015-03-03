@@ -1,5 +1,8 @@
 <?php
+date_default_timezone_set('Europe/Moscow');
+setlocale(LC_ALL, 'ru_RU');
 
+require(__DIR__.'/defines.php');
 $params = require(__DIR__ . '/params.php');
 
 $config = [
