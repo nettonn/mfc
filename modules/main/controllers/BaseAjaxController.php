@@ -1,6 +1,6 @@
 <?php namespace app\modules\main\controllers;
 
-abstract class BaseFrontendController extends BaseController
+abstract class BaseAjaxController extends BaseController
 {
     public function init()
     {

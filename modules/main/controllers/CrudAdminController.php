@@ -1,10 +1,4 @@
-<?php
-/**
- * created by dmitry lebedev <dev.nettonn@gmail.com>.
- * Date: 01.03.2015
- */
-
-namespace app\modules\main\controllers;
+<?php namespace app\modules\main\controllers;
 
 use Yii;
 use yii\filters\VerbFilter;

@@ -1,6 +1,4 @@
-<?php
-
-namespace app\modules\user\controllers;
+<?php namespace app\modules\user\controllers;
 
 use app\modules\user\models\ConfirmEmailForm;
 use app\modules\user\models\LoginForm;

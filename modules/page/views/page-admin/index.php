@@ -23,23 +23,12 @@ $this->params['menu'] = [
         ],
         [
             'class' => 'kartik\grid\EditableColumn',
-            'attribute'=>'username',
+            'attribute'=>'name',
             'editableOptions' => [
                 'inputType' => \kartik\editable\Editable::INPUT_TEXT,
             ],
         ],
-        'email:email',
-        [
-            'class' => 'kartik\grid\EditableColumn',
-            'attribute'=>'role',
-            'content'=>function ($model, $key, $index, $column){
-                return $model->getRoleName($model->role);
-            },
-            'editableOptions' => [
-                'inputType' => \kartik\editable\Editable::INPUT_DROPDOWN_LIST,
-                'data'=>$searchModel->getRolesArray(),
-            ],
-        ],
+        'alias',
         [
             'class' => 'kartik\grid\EditableColumn',
             'attribute'=>'status',

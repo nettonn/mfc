@@ -1,10 +1,4 @@
-<?php
-/**
- * @author: dmitry lebedev <dev.nettonn@gmail.com>
- * Date: 26.01.2015
- */
-
-namespace app\modules\main\controllers;
+<?php namespace app\modules\main\controllers;
 
 abstract class BaseController extends \yii\web\Controller
 {

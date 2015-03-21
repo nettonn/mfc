@@ -22,7 +22,10 @@ $config = [
         ],
         'gridview' =>  [
             'class' => '\kartik\grid\Module'
-        ]
+        ],
+        'page' => [
+            'class' => 'app\modules\page\Module',
+        ],
     ],
     'components' => [
         'session' => [
@@ -38,8 +41,8 @@ $config = [
             'cookieValidationKey' => '5xN03URjhVqoxWjNeqIHacMaxMgY4gXD',
         ],
         'cache' => [
-//            'class' => 'yii\caching\FileCache',
-            'class' => 'yii\caching\MemCache',
+            'class' => 'yii\caching\FileCache',
+//            'class' => 'yii\caching\MemCache',
         ],
         'user' => [
             'identityClass' => 'app\modules\user\models\User',

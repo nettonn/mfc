@@ -3,7 +3,7 @@
 namespace app\modules\user\models;
 
 use Yii;
-use yii\db\ActiveRecord;
+use app\modules\main\models\BaseActiveRecord;
 use yii\behaviors\TimestampBehavior;
 use yii\web\IdentityInterface;
 use yii\base\NotSupportedException;
@@ -23,7 +23,7 @@ use yii\base\NotSupportedException;
  * @property integer $created_at
  * @property integer $updated_at
  */
-class User extends ActiveRecord implements IdentityInterface
+class User extends BaseActiveRecord implements IdentityInterface
 {
     const STATUS_BLOCKED = 0;
     const STATUS_ACTIVE = 1;

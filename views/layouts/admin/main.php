@@ -37,6 +37,7 @@ AppAsset::register($this);
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
+                    ['label' => 'Страницы', 'url' => ['/page/page-admin/index']],
                     ['label' => 'Пользователи', 'url' => ['/user/user-admin/index']],
                     [
                         'label' => 'Выход (' . Yii::$app->user->identity->username . ')',

@@ -1,10 +1,4 @@
-<?php
-/**
- * @author: dmitry lebedev <dev.nettonn@gmail.com>
- * Date: 13.01.2015
- */
-
-namespace app\modules\main\controllers;
+<?php namespace app\modules\main\controllers;
 
 class DefaultController extends BaseFrontendController
 {

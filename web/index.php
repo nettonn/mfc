@@ -1,6 +1,6 @@
 <?php
 
-define('YII_DEBUG', in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '95.27.51.89']));
+define('YII_DEBUG', in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '95.27.4.141']));
 
 if(defined('YII_DEBUG') && YII_DEBUG) {
     define('YII_ENV', 'dev');
@@ -9,7 +9,7 @@ if(defined('YII_DEBUG') && YII_DEBUG) {
 } else {
     ini_set('display_errors', 'off');
     error_reporting(E_ERROR);
-    die();
+//    die();
 }
 
 require(__DIR__ . '/../vendor/autoload.php');
