@@ -36,7 +36,13 @@ $this->params['menu'] = [
         [
             'class' => '\yii2mod\toggle\ToggleColumn',
             'attribute' => 'status',
-            'filter'=>$searchModel->getStatusesArray()
+            'filter'=>false,
+            'headerOptions'=>[
+                'style'=>'width: 70px',
+            ],
+            'contentOptions'=>[
+                'class'=>'text-center',
+            ]
         ],
         [
             'class' => 'kartik\grid\ActionColumn',

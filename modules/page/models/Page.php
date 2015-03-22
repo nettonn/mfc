@@ -95,6 +95,4 @@ class Page extends BaseActiveRecord
             self::STATUS_NOT_ACTIVE => 'Не активен',
         ];
     }
-
-
 }
