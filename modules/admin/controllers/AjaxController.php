@@ -1,10 +1,10 @@
 <?php  namespace app\modules\admin\controllers;
 
+use app\modules\main\controllers\BaseAdminAjaxController;
 use Yii;
-use app\modules\main\controllers\BaseAjaxController;
 use yii\helpers\FileHelper;
 
-class AjaxController extends BaseAjaxController
+class AjaxController extends BaseAdminAjaxController
 {
     public function actionClearCache()
     {
