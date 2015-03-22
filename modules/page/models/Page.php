@@ -40,7 +40,7 @@ class Page extends BaseActiveRecord
     public function rules()
     {
         return [
-            [['name', 'alias', 'status', 'seo_title', 'seo_h1', 'seo_keywords', 'seo_description'], 'required'],
+            [['name', 'alias', 'status'], 'required'],
             [['parent_id', 'status', 'created_at', 'updated_at'], 'integer'],
             [['content'], 'string'],
             [['name', 'alias', 'seo_title', 'seo_h1', 'seo_keywords', 'seo_description'], 'string', 'max' => 255],
@@ -94,6 +94,14 @@ class Page extends BaseActiveRecord
             self::STATUS_ACTIVE => 'Активен',
             self::STATUS_NOT_ACTIVE => 'Не активен',
         ];
+    }
+
+    public function init()
+    {
+        parent::init();
+        if($this->isNewRecord) {
+            $this->status = self::STATUS_ACTIVE;
+        }
     }
 
 }

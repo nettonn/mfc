@@ -23,10 +23,10 @@ class m150321_153857_create_page_table extends Migration
             'created_at' => Schema::TYPE_INTEGER . ' DEFAULT NULL',
             'updated_at' => Schema::TYPE_INTEGER . ' DEFAULT NULL',
 
-            'seo_title' => Schema::TYPE_STRING . ' NOT NULL',
-            'seo_h1' => Schema::TYPE_STRING . ' NOT NULL',
-            'seo_keywords' => Schema::TYPE_STRING . ' NOT NULL',
-            'seo_description' => Schema::TYPE_STRING . ' NOT NULL',
+            'seo_title' => Schema::TYPE_STRING . ' DEFAULT NULL',
+            'seo_h1' => Schema::TYPE_STRING . ' DEFAULT NULL',
+            'seo_keywords' => Schema::TYPE_STRING . ' DEFAULT NULL',
+            'seo_description' => Schema::TYPE_STRING . ' DEFAULT NULL',
         ], $tableOptions);
     }
 
