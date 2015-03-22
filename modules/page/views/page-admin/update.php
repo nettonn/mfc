@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\modules\main\models\BaseActiveRecord */
 
-$this->title = $model->getAttributeLabel('modelName').' изменение: ' . ' ' . $model->username;
+$this->title = $model->getAttributeLabel('modelName').' изменение: ' . ' ' . (isset($model->name)?$model->name:$model->id);
 $this->params['breadcrumbs'][] = ['label' => $model->getAttributeLabel('modelName'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = 'Изменение';
 $this->params['menu'] = [

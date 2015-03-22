@@ -1,6 +1,6 @@
 <?php
 
-define('YII_DEBUG', in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '95.27.4.141']));
+define('YII_DEBUG', in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '95.27.37.157']));
 
 if(defined('YII_DEBUG') && YII_DEBUG) {
     define('YII_ENV', 'dev');

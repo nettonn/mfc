@@ -25,10 +25,6 @@ class PageAdminController extends CrudAdminController
 
     protected function getEditableReturnValue($attributes)
     {
-        if(isset($attributes['status']))
-            return (new Page())->getStatusName($attributes['status']);
-        if(isset($attributes['role']))
-            return (new Page())->getRoleName($attributes['role']);
         return '';
     }
 }

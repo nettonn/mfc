@@ -6,6 +6,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\web\NotFoundHttpException;
 use app\modules\main\models\BaseActiveRecord;
+use yii2mod\toggle\actions\ToggleAction;
 
 abstract class CrudAdminController extends BaseAdminController
 {
@@ -64,24 +65,18 @@ abstract class CrudAdminController extends BaseAdminController
         $model = $this->getModel('model');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            if(Yii::$app->request->post('save-add'))
+                return $this->redirect(['create']);
+            if(Yii::$app->request->post('save-exit'))
+                return $this->redirect(['index']);
+            if(Yii::$app->request->post('save-show') && method_exists($model, 'getUrl'))
+                return $this->redirect($model->getUrl());
+            return $this->redirect(['update', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
             ]);
         }
-    }
-
-    /**
-     * Displays a single model.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
     }
 
     /**
@@ -95,7 +90,13 @@ abstract class CrudAdminController extends BaseAdminController
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            if(Yii::$app->request->post('save-add'))
+                return $this->redirect(['create']);
+            if(Yii::$app->request->post('save-exit'))
+                return $this->redirect(['index']);
+            if(Yii::$app->request->post('save-show') && method_exists($model, 'getUrl'))
+                return $this->redirect($model->getUrl());
+            return $this->redirect(['update', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -145,4 +146,14 @@ abstract class CrudAdminController extends BaseAdminController
     }
 
     abstract protected function getEditableReturnValue($attributes);
+
+    public function actions()
+    {
+        return [
+            'toggle' => [
+                'class' => ToggleAction::className(),
+                'modelClass' => get_class($this->getModel('model')),
+            ]
+        ];
+    }
 }

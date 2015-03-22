@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\main\models\BaseActiveRecord */
@@ -28,23 +29,18 @@ $this->params['menu'] = [
                 'inputType' => \kartik\editable\Editable::INPUT_TEXT,
             ],
         ],
+
         'alias',
-        [
-            'class' => 'kartik\grid\EditableColumn',
-            'attribute'=>'status',
-            'content'=>function ($model, $key, $index, $column){
-                return $model->getStatusName($model->status);
-            },
-            'editableOptions' => [
-                'inputType' => \kartik\editable\Editable::INPUT_DROPDOWN_LIST,
-                'data'=>$searchModel->getStatusesArray(),
-            ],
-        ],
         'created_at:date',
         'updated_at:date',
+        [
+            'class' => '\yii2mod\toggle\ToggleColumn',
+            'attribute' => 'status',
+            'enableAjax'=>false,
+            'filter'=>$searchModel->getStatusesArray()
+        ],
         ['class' => 'kartik\grid\ActionColumn'],
-    ] ?>
-
-    <?= $this->render('//layouts/admin/part/_grid', ['dataProvider'=>$dataProvider, 'searchModel'=>$searchModel, 'gridColumns'=>$gridColumns, 'title'=>$this->title]) ?>
-
+    ];
+    echo $this->render('//layouts/admin/part/_grid', ['dataProvider'=>$dataProvider, 'searchModel'=>$searchModel, 'gridColumns'=>$gridColumns, 'title'=>$this->title]);
+    ?>
 </div>

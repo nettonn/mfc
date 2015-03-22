@@ -15,7 +15,8 @@
         "trntv/yii2-aceeditor": "*",
         "kartik-v/yii2-grid": "*",
         "kartik-v/yii2-editable": "dev-master",
-        "kartik-v/yii2-widgets": "*"
+        "kartik-v/yii2-widgets": "*",
+        "yii2mod/yii2-toggle-column": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",

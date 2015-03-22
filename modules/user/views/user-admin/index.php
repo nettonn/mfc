@@ -54,8 +54,9 @@ $this->params['menu'] = [
         'created_at:date',
         'updated_at:date',
         ['class' => 'kartik\grid\ActionColumn'],
-    ] ?>
+    ];
 
-    <?= $this->render('//layouts/admin/part/_grid', ['dataProvider'=>$dataProvider, 'searchModel'=>$searchModel, 'gridColumns'=>$gridColumns, 'title'=>$this->title]) ?>
+    echo $this->render('//layouts/admin/part/_grid', ['dataProvider'=>$dataProvider, 'searchModel'=>$searchModel, 'gridColumns'=>$gridColumns, 'title'=>$this->title])
+    ?>
 
 </div>
