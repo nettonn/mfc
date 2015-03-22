@@ -1,10 +1,4 @@
-<?php
-/**
- * @author: dmitry lebedev <dev.nettonn@gmail.com>
- * Date: 14.01.2015
- */
-
-namespace app\modules\main\widgets;
+<?php namespace app\modules\main\widgets;
 /**
  * Alert widget renders a message from session flash. All flash messages are displayed
  * in the sequence they were assigned using setFlash. You can set message as following:

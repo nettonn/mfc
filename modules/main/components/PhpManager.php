@@ -1,10 +1,4 @@
-<?php
-/**
- * @author: dmitry lebedev <dev.nettonn@gmail.com>
- * Date: 14.01.2015
- */
-
-namespace app\modules\main\components;
+<?php namespace app\modules\main\components;
 
 use Yii;
 use yii\rbac\Assignment;

@@ -1,8 +1,5 @@
 <?php
-/**
- * @author: dmitry lebedev <dev.nettonn@gmail.com>
- * Date: 14.01.2015
- */
+
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 /* @var $this yii\web\View */

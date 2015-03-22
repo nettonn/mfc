@@ -1,10 +1,4 @@
-<?php
-/**
- * @author: dmitry lebedev <dev.nettonn@gmail.com>
- * Date: 28.01.2015
- */
-
-namespace app\modules\main\widgets;
+<?php namespace app\modules\main\widgets;
 
 use Yii;
 use yii\helpers\Html;

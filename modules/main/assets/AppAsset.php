@@ -1,11 +1,4 @@
-<?php
-/**
- * @link http://www.yiiframework.com/
- * @copyright Copyright (c) 2008 Yii Software LLC
- * @license http://www.yiiframework.com/license/
- */
-
-namespace app\modules\main\assets;
+<?php namespace app\modules\main\assets;
 
 use yii\web\AssetBundle;
 

@@ -1,6 +1,4 @@
-<?php
-
-namespace app\modules\admin\controllers;
+<?php namespace app\modules\admin\controllers;
 
 use app\modules\main\controllers\BaseAdminController;
 

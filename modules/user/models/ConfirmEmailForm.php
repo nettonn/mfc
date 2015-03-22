@@ -1,10 +1,4 @@
-<?php
-/**
- * @author: dmitry lebedev <dev.nettonn@gmail.com>
- * Date: 14.01.2015
- */
-
-namespace app\modules\user\models;
+<?php namespace app\modules\user\models;
 
 use yii\base\InvalidParamException;
 use yii\base\Model;

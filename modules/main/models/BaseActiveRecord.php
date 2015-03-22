@@ -1,10 +1,4 @@
-<?php
-/**
- * @author: dmitry lebedev <dev.nettonn@gmail.com>
- * Date: 30.01.2015
- */
-
-namespace app\modules\main\models;
+<?php namespace app\modules\main\models;
 
 use yii\db\ActiveRecord;
 

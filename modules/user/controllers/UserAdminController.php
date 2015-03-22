@@ -1,6 +1,4 @@
-<?php
-
-namespace app\modules\user\controllers;
+<?php namespace app\modules\user\controllers;
 
 use app\modules\main\controllers\CrudAdminController;
 use Yii;
