@@ -35,7 +35,7 @@ AppAsset::register($this);
                 ],
             ]);
             echo Nav::widget([
-                'options' => ['class' => 'navbar-nav navbar-right'],
+                'options' => ['class' => 'navbar-nav navbar-left'],
                 'items' => [
                     ['label' => 'Страницы', 'url' => ['/page/page-admin/index']],
                     ['label' => 'Пользователи', 'url' => ['/user/user-admin/index']],
@@ -43,6 +43,21 @@ AppAsset::register($this);
                         'label' => 'Выход (' . Yii::$app->user->identity->username . ')',
                         'url' => ['/user/default/logout'],
                         'linkOptions' => ['data-method' => 'post']
+                    ],
+                ],
+            ]);
+            echo Nav::widget([
+                'options' => ['class' => 'navbar-nav navbar-right'],
+                'items' => [
+                    [
+                        'label' => 'Очистить кеш',
+                        'url' => '#',
+                        'linkOptions'=>[
+                            'class'=>'ajax-button',
+                            'data-url'=>\yii\helpers\Url::toRoute(['/admin/ajax/clear-cache']),
+                            'data-state'=>'Очистка...',
+                            'data-success'=>'Очищено',
+                        ]
                     ],
                 ],
             ]);
