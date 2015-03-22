@@ -8,7 +8,7 @@ use app\modules\main\widgets\ActiveForm;
 /* @var $form app\modules\main\widgets\ActiveForm */
 ?>
 
-<div class="user-form">
+<div class="<?= $this->context->id ?>-form">
 
     <?php $form = ActiveForm::begin(); ?>
 

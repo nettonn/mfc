@@ -12,7 +12,7 @@ $this->params['menu'] = [
     ['label'=>'Добавить', 'url'=>['create']],
 ];
 ?>
-<div class="user-index">
+<div class="<?= $this->context->id ?>-index">
 
     <?php
     $gridColumns = [

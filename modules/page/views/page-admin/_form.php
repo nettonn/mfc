@@ -7,7 +7,7 @@ use app\modules\main\widgets\ActiveForm;
 /* @var $form app\modules\main\widgets\ActiveForm */
 ?>
 
-<div class="<?= get_class($model) ?>-form">
+<div class="<?= $this->context->id ?>-form">
 
     <?php $form = ActiveForm::begin(); ?>
 

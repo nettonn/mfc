@@ -39,6 +39,7 @@ $config = [
         ],
         'request' => [
             'cookieValidationKey' => '5xN03URjhVqoxWjNeqIHacMaxMgY4gXD',
+            'enableCsrfValidation'=>IS_ADMIN_ROUTE,
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',

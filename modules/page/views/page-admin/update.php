@@ -13,7 +13,7 @@ $this->params['menu'] = [
     ['label'=>'Добавить', 'url'=>['create']],
 ];
 ?>
-<div class="user-update">
+<div class="<?= $this->context->id ?>-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
