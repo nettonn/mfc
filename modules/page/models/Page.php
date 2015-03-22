@@ -95,13 +95,4 @@ class Page extends BaseActiveRecord
             self::STATUS_NOT_ACTIVE => 'Не активен',
         ];
     }
-
-    public function init()
-    {
-        parent::init();
-        if($this->isNewRecord) {
-            $this->status = self::STATUS_ACTIVE;
-        }
-    }
-
 }

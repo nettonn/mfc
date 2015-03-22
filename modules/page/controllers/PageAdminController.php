@@ -18,13 +18,17 @@ class PageAdminController extends CrudAdminController
             case 'model':
                 return new Page();
             case 'name':
-                return 'User';
+                return 'Page';
         }
         return Page::findOne($typeOrCondition);
     }
 
     protected function getEditableReturnValue($attributes)
     {
+        if(isset($attributes['name']))
+            return $attributes['name'];
+        if(isset($attributes['status']))
+            return (new Page())->getStatusName($attributes['status']);
         return '';
     }
 }

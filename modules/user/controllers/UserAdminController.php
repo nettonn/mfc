@@ -25,6 +25,8 @@ class UserAdminController extends CrudAdminController
 
     protected function getEditableReturnValue($attributes)
     {
+        if(isset($attributes['username']))
+            return $attributes['username'];
         if(isset($attributes['status']))
             return (new User())->getStatusName($attributes['status']);
         if(isset($attributes['role']))

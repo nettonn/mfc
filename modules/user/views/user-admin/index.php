@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\main\models\BaseActiveRecord */
+/* @var $searchModel app\modules\main\models\BaseActiveRecord */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = $searchModel->getAttributeLabel('modelName').' управление';
@@ -40,6 +40,8 @@ $this->params['menu'] = [
                 'data'=>$searchModel->getRolesArray(),
             ],
         ],
+        'created_at:date',
+        'updated_at:date',
         [
             'class' => 'kartik\grid\EditableColumn',
             'attribute'=>'status',
@@ -51,8 +53,6 @@ $this->params['menu'] = [
                 'data'=>$searchModel->getStatusesArray(),
             ],
         ],
-        'created_at:date',
-        'updated_at:date',
         ['class' => 'kartik\grid\ActionColumn'],
     ];
 

@@ -2,13 +2,12 @@
 
 use yii\helpers\Html;
 use app\modules\main\widgets\ActiveForm;
-
 /* @var $this yii\web\View */
 /* @var $model app\modules\main\models\BaseActiveRecord */
 /* @var $form app\modules\main\widgets\ActiveForm */
 ?>
 
-<div class="user-form">
+<div class="<?= get_class($model) ?>-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
