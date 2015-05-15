@@ -19,7 +19,7 @@ class m150321_153857_create_page_table extends Migration
             'content'=>Schema::TYPE_TEXT,
 
             'layout' => Schema::TYPE_STRING . '(50)',
-            'status' => Schema::TYPE_SMALLINT.'(1) DEFAULT 0',
+            'status' => Schema::TYPE_BOOLEAN.' NOT NULL DEFAULT 0',
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
 
