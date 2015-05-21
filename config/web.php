@@ -26,6 +26,9 @@ $config = [
         'page' => [
             'class' => 'app\modules\page\Module',
         ],
+        'yii2demandimg'=>[
+            'class'=>'nettonn\yii2demandimg\Module',
+        ]
     ],
     'components' => [
         'session' => [
