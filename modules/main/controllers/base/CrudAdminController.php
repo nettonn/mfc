@@ -1,4 +1,4 @@
-<?php namespace app\modules\main\controllers;
+<?php namespace app\modules\main\controllers\base;
 
 use Yii;
 use yii\filters\VerbFilter;
@@ -8,7 +8,7 @@ use yii\web\NotFoundHttpException;
 use app\modules\main\models\BaseActiveRecord;
 use yii2mod\toggle\actions\ToggleAction;
 
-abstract class CrudAdminController extends BaseAdminController
+abstract class CrudAdminController extends AdminController
 {
     /**
      * switch($typeOrCondition) {

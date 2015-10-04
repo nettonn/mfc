@@ -1,9 +1,9 @@
-<?php namespace app\modules\main\controllers;
+<?php namespace app\modules\main\controllers\base;
 
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
 
-abstract class BaseFrontendAjaxController extends BaseFrontendController
+abstract class FrontendAjaxController extends FrontendController
 {
     public function init()
     {

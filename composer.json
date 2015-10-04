@@ -16,7 +16,8 @@
         "kartik-v/yii2-grid": "*",
         "kartik-v/yii2-editable": "dev-master",
         "kartik-v/yii2-widgets": "*",
-        "yii2mod/yii2-toggle-column": "dev-master"
+        "yii2mod/yii2-toggle-column": "dev-master",
+        "omnilight/yii2-scheduling": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",
