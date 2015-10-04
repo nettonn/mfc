@@ -29,7 +29,7 @@ $config = [
     ],
     'components' => [
         'session' => [
-            'class' => 'yii\web\DbSession',
+            'class' => 'yii\web\CacheSession',
         ],
         'authManager' => [
             'class' => 'app\modules\main\components\PhpManager',
