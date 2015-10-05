@@ -1,9 +1,9 @@
-<?php namespace app\modules\main\controllers;
+<?php namespace app\modules\main\controllers\base;
 
 use yii\filters\AccessControl;
 use yii\helpers\ArrayHelper;
 
-abstract class BaseAdminController extends BaseController
+abstract class AdminController extends Controller
 {
     public $layout = '/admin/main';
 

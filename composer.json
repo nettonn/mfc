@@ -17,8 +17,7 @@
         "kartik-v/yii2-editable": "dev-master",
         "kartik-v/yii2-widgets": "*",
         "yii2mod/yii2-toggle-column": "dev-master",
-        "costa-rico/yii2-images": "dev-master",
-        "yiisoft/yii2-imagine": "*"
+        "omnilight/yii2-scheduling": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",
@@ -28,11 +27,6 @@
         "process-timeout": 1800
     },
     "scripts": {
-    },
-    "autoload": {
-       "psr-4": {
-         "nettonn\\yii2demandimg\\": "../packages/yii2demandimg"
-       }
     },
     "extra": {
         "asset-installer-paths": {

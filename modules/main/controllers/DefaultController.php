@@ -1,6 +1,8 @@
 <?php namespace app\modules\main\controllers;
 
-class DefaultController extends BaseFrontendController
+use app\modules\main\controllers\base\FrontendController;
+
+class DefaultController extends FrontendController
 {
     public function actions()
     {

@@ -1,6 +1,6 @@
 <?php namespace app\modules\page\controllers;
 
-use app\modules\main\controllers\CrudAdminController;
+use app\modules\main\controllers\base\CrudAdminController;
 use Yii;
 use app\modules\page\models\Page;
 use app\modules\page\models\PageSearch;

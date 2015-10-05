@@ -1,6 +1,6 @@
 <?php namespace app\modules\user\controllers;
 
-use app\modules\main\controllers\CrudAdminController;
+use app\modules\main\controllers\base\CrudAdminController;
 use Yii;
 use app\modules\user\models\User;
 use app\modules\user\models\UserSearch;

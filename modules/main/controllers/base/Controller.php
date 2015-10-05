@@ -1,6 +1,6 @@
-<?php namespace app\modules\main\controllers;
+<?php namespace app\modules\main\controllers\base;
 
-abstract class BaseController extends \yii\web\Controller
+abstract class Controller extends \yii\web\Controller
 {
     public function init()
     {

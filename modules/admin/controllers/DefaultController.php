@@ -1,8 +1,8 @@
 <?php namespace app\modules\admin\controllers;
 
-use app\modules\main\controllers\BaseAdminController;
+use app\modules\main\controllers\base\AdminController;
 
-class DefaultController extends BaseAdminController
+class DefaultController extends AdminController
 {
     public function actionIndex()
     {
